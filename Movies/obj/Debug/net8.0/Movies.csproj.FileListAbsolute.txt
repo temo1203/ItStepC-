@@ -1,0 +1,14 @@
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.AssemblyInfoInputs.cache
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.AssemblyInfo.cs
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.csproj.CoreCompileInputs.cache
+c:\Users\user\Desktop\MovieHomework\Movies\bin\Debug\net8.0\Movies.exe
+c:\Users\user\Desktop\MovieHomework\Movies\bin\Debug\net8.0\Movies.deps.json
+c:\Users\user\Desktop\MovieHomework\Movies\bin\Debug\net8.0\Movies.runtimeconfig.json
+c:\Users\user\Desktop\MovieHomework\Movies\bin\Debug\net8.0\Movies.dll
+c:\Users\user\Desktop\MovieHomework\Movies\bin\Debug\net8.0\Movies.pdb
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.dll
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\refint\Movies.dll
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.pdb
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.genruntimeconfig.cache
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\ref\Movies.dll
