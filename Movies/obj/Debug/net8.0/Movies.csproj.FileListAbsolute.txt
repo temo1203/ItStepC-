@@ -12,3 +12,4 @@ c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\refint\Movies.dll
 c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.pdb
 c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.genruntimeconfig.cache
 c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\ref\Movies.dll
+c:\Users\user\Desktop\MovieHomework\Movies\obj\Debug\net8.0\Movies.sourcelink.json

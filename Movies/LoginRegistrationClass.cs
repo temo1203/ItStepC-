@@ -4,7 +4,8 @@ namespace Movie
     {
         public void FistPage()
         {
-            User user = new User();
+            int CountOfReset = 0;
+            User user = new();
             bool whileBool = true;
             while (whileBool)
             {
@@ -31,8 +32,18 @@ namespace Movie
                                 // return; // Exit the method after successful login
                             }
                         }
-
+                        if (CountOfReset == 3)
+                        {
+                            System.Console.WriteLine("Recovering Your Information!!");
+                            System.Console.WriteLine("Enter Your Name");
+                            string? ResetName = Console.ReadLine();
+                            System.Console.WriteLine("");
+                            System.Console.WriteLine("Enter Your New Password!!");
+                            string? ResetPassword = Console.ReadLine();
+                            CountOfReset = 0;
+                        }
                         // If no matching user is found
+                        CountOfReset++;
                         Console.WriteLine("Invalid username or password. Please try again.");
                     }
                     else if (selectedNum == 2)
@@ -42,7 +53,7 @@ namespace Movie
                     else if (selectedNum == 3)
                     {
                         System.Console.WriteLine("Bye Bye :)");
-                        user.PrintUsersList();
+                        whileBool = false;
                     }
                     else
                     {

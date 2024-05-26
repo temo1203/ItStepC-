@@ -5,7 +5,7 @@ namespace Movie
 
         public static void ShowRegistration()
         {
-
+            IUserInterface userInterface = new User();
             System.Console.WriteLine("Name: ");
             string? name = Console.ReadLine();
             System.Console.WriteLine("Username: ");
@@ -22,8 +22,8 @@ namespace Movie
                 System.Console.WriteLine("Registration successful :)");
                 System.Console.WriteLine($"{name}=={username}=={password}=={email}");
 
-                // we are creating object where we insert user info
-                User user = new User(name, username, password, email);
+                // userInterface object where we insert things
+                userInterface.UserAboutInfo(name, username, password, email);
             }
             else
             {
