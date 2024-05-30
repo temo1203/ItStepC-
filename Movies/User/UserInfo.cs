@@ -3,11 +3,11 @@ namespace Movie
     public class User : IUserInterface
     {
 
-        public string Name { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public static List<User> UsersList = new List<User>();
+        public string? Name { get; set; }
+        public string? Username { get; set; }
+        public string? Password { get; set; }
+        public string? Email { get; set; }
+        public static List<User> UsersList = new List<User>() { new User { Name = "temo", Username = "Lortkiapanidze", Password = "temotemo", Email = "temolortkipanidze2007@gmail.com" } };
 
         //prints user things
         public void PrintUserList()
