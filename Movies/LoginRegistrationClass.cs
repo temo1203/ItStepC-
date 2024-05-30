@@ -10,7 +10,7 @@ namespace Movie
             while (whileBool)
             {
                 System.Console.WriteLine("Login(1)--Registration(2)--Exit(3)");
-                int selectedNum = Convert.ToInt32(Console.ReadLine());
+                int selectedNum = int.Parse(Console.ReadLine());
                 try
                 {
                     if (selectedNum == 1)
