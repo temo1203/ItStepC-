@@ -38,7 +38,9 @@ namespace Movie
                         movieInterface.PrintFilmList();
                         break;
                     case 4:
-                        Console.WriteLine("Thursday");
+                        System.Console.WriteLine("Enter Removed Movie Id");
+                        int addedId = int.Parse(Console.ReadLine());
+                        films.RemoveFilmById(addedId);
                         break;
                     case 5:
 
