@@ -6,23 +6,23 @@ namespace Movie
         public static void ShowRegistration()
         {
             IUserInterface userInterface = new User();
-            System.Console.WriteLine("Name: ");
+            System.Console.WriteLine("Enter Name: ");
             string? name = Console.ReadLine();
-            System.Console.WriteLine("Username: ");
+            System.Console.WriteLine("Enter Username: ");
             string? username = Console.ReadLine();
-            System.Console.WriteLine("Password: ");
+            System.Console.WriteLine("Enter Password: ");
             string? password = Console.ReadLine();
             System.Console.WriteLine("Email: ");
             string? email = Console.ReadLine();
-            System.Console.WriteLine("Registration successful :)");
+
 
 
             if (name != null && username != null && password != null && email != null)
             {
                 System.Console.WriteLine("Registration successful :)");
-                System.Console.WriteLine($"{name}=={username}=={password}=={email}");
 
-                // userInterface object where we insert things
+
+
                 userInterface.UserAboutInfo(name, username, password, email);
             }
             else

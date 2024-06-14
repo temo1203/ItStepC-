@@ -5,11 +5,12 @@ namespace Movie
 {
     public class Film : IMovieInterface
     {
-        public int Id { get; set; } // Unique ID for each film
+        public int Id { get; set; }
         public string Name { get; set; }
         public DateTime ReleaseDate { get; set; }
         public double IMDbRating { get; set; }
         public List<Film> FilmList { get; set; }
+        public List<Film> SelectedList { get; set; }
 
         private static List<Film> GetPredefinedFilms()
         {
@@ -28,13 +29,20 @@ namespace Movie
             };
         }
 
-        // Default constructor initializes FilmList with predefined films
+        private static List<Film> GetSelectedFilms()
+        {
+            return new List<Film>
+            {
+                new Film(1, "The Shawshank Redemption", new DateTime(1994, 10, 14), 9.3)
+            };
+        }
+
         public Film()
         {
             FilmList = GetPredefinedFilms();
+            SelectedList = GetSelectedFilms();
         }
 
-        // Constructor to create individual Film objects with an ID
         public Film(int id, string name, DateTime releaseDate, double imdbRating)
         {
             Id = id;
@@ -56,7 +64,8 @@ namespace Movie
             var film = FilmList.Find(f => f.Name.Equals(filmName, StringComparison.OrdinalIgnoreCase));
             if (film != null)
             {
-                Console.WriteLine($"You have selected: {film.Name}");
+                Console.WriteLine($"You have Added: {film.Name} in Show Selected Movies section");
+                SelectedList.Add(film);
             }
             else
             {
@@ -69,8 +78,8 @@ namespace Movie
             int newId = FilmList.Count > 0 ? FilmList[FilmList.Count - 1].Id + 1 : 1;
             Film newFilm = new Film(newId, name, releaseDate, imdbRating);
             FilmList.Add(newFilm);
+            Console.WriteLine($"Movie added with Name: {name}");
         }
-
 
         public void RemoveFilmById(int id)
         {
@@ -86,8 +95,16 @@ namespace Movie
                 Console.WriteLine($"Film with ID {id} not found.");
             }
             Console.WriteLine("Current Film List after removal:");
-            PrintFilmList(); // Debugging output
+            PrintFilmList();
         }
 
+        public void SelectedFilms()
+        {
+            Console.WriteLine("Selected Films:");
+            foreach (var film in SelectedList)
+            {
+                Console.WriteLine($"{film.Name}");
+            }
+        }
     }
 }

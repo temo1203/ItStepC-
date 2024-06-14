@@ -9,7 +9,7 @@ namespace Movie
         public string? Email { get; set; }
         public static List<User> UsersList = new List<User>() { new User { Name = "temo", Username = "Lortkiapanidze", Password = "temotemo", Email = "temolortkipanidze2007@gmail.com" } };
 
-        //prints user things
+
         public void PrintUserList()
         {
             Console.WriteLine("Registered Users:");
@@ -20,7 +20,7 @@ namespace Movie
         }
 
 
-        //interface of user
+
         public void UserAboutInfo(string name, string username, string password, string email)
         {
             Name = name;

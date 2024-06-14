@@ -21,15 +21,15 @@ namespace Movie
                         System.Console.WriteLine("Enter Password:");
                         string? EnteredPassword = Console.ReadLine();
 
-                        //! Check if a user with the entered name exists
+
                         foreach (User item in User.UsersList)
                         {
                             if (item.Name == EnteredName && item.Password == EnteredPassword)
                             {
-                                //* Perform action for authenticated user
+
                                 Console.WriteLine("Login successful!");
                                 HomeMovieClass.MovieSection();
-                                // return; // Exit the method after successful login
+
                             }
                         }
                         if (CountOfReset == 3)
@@ -42,7 +42,7 @@ namespace Movie
                             string? ResetPassword = Console.ReadLine();
                             CountOfReset = 0;
                         }
-                        // If no matching user is found
+
                         CountOfReset++;
                         Console.WriteLine("Invalid username or password. Please try again.");
                     }
