@@ -5,6 +5,7 @@ namespace Movie
         public static void MovieSection()
         {
             bool isBool = true;
+            Film film = new();
             IUserInterface userInterface = new User();
             IMovieInterface movieInterface = new Film();
             Console.WriteLine("Welcome to AdjaraNet.com");
@@ -12,7 +13,7 @@ namespace Movie
             System.Console.WriteLine("");
             while (isBool)
             {
-                Console.WriteLine("Search Movie(1)\nAdd Movie(2)\nPrint Movie(3)\nRemove movie(4)\nShow Selected Movies(5)\n------------------\nMember registration(6)\nPrint member(7)\nRemove member(8)\nSearch member(9)\nLogin(10)");
+                Console.WriteLine("Search Movie(1)\nAdd Movie(2)\nPrint Movie(3)\nRemove movie(4)\nShow Selected Movies(5)\n------------------\nMember registration(6)\nPrint members(7)");
                 var num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
                 {
@@ -25,14 +26,24 @@ namespace Movie
                         }
                         break;
                     case 2:
+
                         System.Console.WriteLine("Add Your Movie :)");
                         var addedMovie = Console.ReadLine();
                         System.Console.WriteLine("Enter IMDB");
                         double movieIMDB = int.Parse(Console.ReadLine());
-                        if (addedMovie != null)
+                        if (addedMovie != null && movieIMDB != 0)
                         {
-                            movieInterface.AddMovieList(addedMovie, DateTime.Now, movieIMDB);
-                            Console.WriteLine($"Movie '{addedMovie}' added successfully.");
+
+                            bool movieExists = film.FilmList.Any(f => f.Name.Equals(addedMovie, StringComparison.OrdinalIgnoreCase));
+                            if (!movieExists)
+                            {
+                                movieInterface.AddMovieList(addedMovie, DateTime.Now, movieIMDB);
+                                Console.WriteLine($"Movie '{addedMovie}' added successfully.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("The movie already exists and cannot be added again.");
+                            }
                         }
                         else
                         {
@@ -59,14 +70,8 @@ namespace Movie
                     case 8:
                         // Functionality for removing a member
                         break;
-                    case 9:
-                        // Functionality for searching a member
-                        break;
-                    case 10:
-                        // Functionality for login
-                        break;
                     default:
-                        Console.WriteLine("Invalid input. Please enter a number between 1 and 10.");
+                        Console.WriteLine("Invalid input. Please enter a number between 1 and 9.");
                         break;
                 }
             }
